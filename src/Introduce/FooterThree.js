@@ -81,7 +81,7 @@ function FooterThree({ fontColor }) {
         <div style={style4}>
             <h2 style={style5}>ACHIEVEMENT</h2>
 
-            <Link to="/project" style={{ textDecoration: 'none' }}>
+            <Link to="/Semi" style={{ textDecoration: 'none' }}>
                 <div onMouseOver={mouseOverProject} onMouseOut={mouseOutProject} style={{ height: '20%', gap: '4%', display: "flex" }}>
                     <img
                         src={bell}
