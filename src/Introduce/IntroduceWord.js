@@ -19,36 +19,21 @@ function IntroduceWord({ fontColor }) {
 
     const contentStyle = {
         fontSize: '1.0625rem',
-        fontWeight: '300',
-        color: fontColor ? '#cc99ff' : 'black',
-        margin: 0
+        fontWeight: '400',
+        color: fontColor ? 'white' : 'grey',
+        margin: 0,
+        lineHeight: '1.5' 
     };
 
-    const responsiveStyle = {
-        '@media (max-width: 768px)': {
-            '.introduce-container': {
-                width: '80%',
-                left: '10%',
-                top: '10%'
-            },
-            '.introduce-title': {
-                fontSize: '1rem'
-            },
-            '.introduce-content': {
-                fontSize: '0.875rem'
-            }
-        }
-    };
 
     return (
         <div style={style2} className="introduce-container">
             <h2 style={titleStyle} className="introduce-title">INTRODUCE MYSELF</h2>
             <h3 style={contentStyle} className="introduce-content">
-                안녕하세요! 저는 ChatGPT, OpenAI에서 <br />
-                GPT-3.5 아키텍처를 기반으로 하고 있으며, 여러 분야에서<br />
-                움을 제공할 수 있습니다. 안녕하세요! 저는 ChatGPT, <br />
-                GPT-3.5 아키텍처를 기반으로 하 하며, 여러 분야에서 다양한 주제에 대한 <br />
-                GPT-3.5 아키텍처를 기반으로 하 하며, 여러 분야에서 다양한 <br />
+                안녕하세요, 저는 Java와 Python을 포함한 여러 언어에 익숙한 풀스택 웹 개발자입니다.<br />
+                AI-X 부트캠프와 자바 기반 웹개발 과정을 통해 프론트엔드와 백엔드 기술을 습득했습니다.<br />
+                다양한 프로젝트 경험으로 문제 해결 능력과 협업 능력을 갖추고 있으며,<br />
+                항상 새로운 기술을 배우며 성장하고 있습니다.<br />
             </h3>
             <style>
                 {`

@@ -16,7 +16,7 @@ function FooterOne({ fontColor }) {
     const style6 = {
         fontSize: '18px',
         fontWeight: fontColor ? '300' : '600',
-        color: fontColor ? '#cc99ff' : 'black',
+        color: fontColor ? 'white' : 'black',
         marginLeft: '3%'
     };
 

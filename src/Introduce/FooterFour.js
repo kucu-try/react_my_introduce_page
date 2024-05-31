@@ -1,4 +1,5 @@
 import git from '../github.png'
+import git2 from '../pngwing.com.png'
 
 function FooterFour({fontColor}){
 
@@ -21,18 +22,16 @@ function FooterFour({fontColor}){
 
 
     const style6 = {
-        width : '90%',
-        height : '50%'
-        ,borderRadius : fontColor ? '10%' : '0%'
-      
-        
+        height : '50%',
+        width : fontColor ? '70%' : '90%',
+        marginLeft : fontColor ? '12%' : '0%'
     }
     return(
         <div style={style4}>
             <h2 style={style5}>GITHUB</h2>
             <a href="https://github.com/kucu-try">
-            <img style={style6} src= {git}  alt="깃허브 로고"/>
-                {/* <img style={style6} src= {fontColor ? "/바이올렛깃.png" : "/깃허브3.png"}  alt="깃허브 로고"/> */}
+            {/* <img style={style6} src= {git}  alt="깃허브 로고"/> */}
+                <img style={style6} src={fontColor ? git2 : git} alt="깃허브 로고" />
             </a>
         </div>
 

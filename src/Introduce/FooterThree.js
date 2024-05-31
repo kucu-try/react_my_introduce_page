@@ -33,17 +33,19 @@ function FooterThree({ fontColor }) {
     const mouseOutFairy = () => setHoverFairy(false);
 
     const style6 = {
+        width: '3rem',
         height: '3rem',
         border: fontColor ? '1px solid #cc99ff' : '1px solid black',
         borderRadius: '50%',
-        transition: 'height 0.5s, border-radius 1s'
+        transition: 'width 0.5s, height 0.5s, border-radius 1s'
     };
 
     const grow = {
+        width: '4rem',
         height: '4rem',
         border: fontColor ? '1px solid #cc99ff' : '1px solid black',
         borderRadius: '50%',
-        transition: 'height 0.3s, border-radius 1s'
+        transition: 'width 0.3s, height 0.3s, border-radius 1s'
     };
 
     const fontGrow = {
@@ -56,25 +58,8 @@ function FooterThree({ fontColor }) {
     const style7 = {
         fontWeight: '350',
         fontSize: '14px',
-        color: fontColor ? '#cc99ff' : 'black',
+        color: fontColor ? 'white' : 'black',
         transition: 'color 0.3s, font-weight 0.3s'
-    };
-
-    const buttonStyle = {
-        border: fontColor ? '1px solid #cc99ff' : '1px solid black',
-        width: '50px',
-        height: '50px',
-        borderRadius: '50%',
-        background: 'none',
-        padding: 0,
-        overflow: 'hidden',
-        transition: 'border 0.3s, height 0.3s'
-    };
-
-    const imgStyle = {
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover'
     };
 
     return (
@@ -92,7 +77,7 @@ function FooterThree({ fontColor }) {
                 </div>
             </Link>
 
-            <Link to="/news" style={{ textDecoration: 'none' }}>
+            <Link to="/News" style={{ textDecoration: 'none' }}>
                 <div onMouseOver={mouseOverNews} onMouseOut={mouseOutNews} style={{ height: '20%', gap: '4%', display: "flex" }}>
                     <img
                         src={news}
@@ -103,7 +88,7 @@ function FooterThree({ fontColor }) {
                 </div>
             </Link>
 
-            <Link to="/fairy" style={{ textDecoration: 'none' }}>
+            <Link to="/Fairy" style={{ textDecoration: 'none' }}>
                 <div onMouseOver={mouseOverFairy} onMouseOut={mouseOutFairy} style={{ height: '20%', gap: '4%', display: "flex" }}>
                     <img
                         src={fairy}

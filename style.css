@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+}
+
+.sky {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 3px white;
+  animation: twinkle 1.5s infinite alternate;
+}
+.star:hover{
+  transform: scale(4.5);
+  background: white;
+  box-shadow: 0 0 12px 6px rgb(255, 255, 204);
+}
+.star:nth-child(1) { top: 20%; left: 30%; animation-delay: 0s; }
+.star:nth-child(2) { top: 40%; left: 60%; animation-delay: 0.5s; }
+.star:nth-child(3) { top: 70%; left: 50%; animation-delay: 1s; }
+.star:nth-child(4) { top: 10%; left: 80%; animation-delay: 1.5s; }
+.star:nth-child(5) { top: 80%; left: 20%; animation-delay: 2s; }
+
+@keyframes twinkle {
+  0% { opacity: 1; }
+  100% { opacity: 0.2; }
+}

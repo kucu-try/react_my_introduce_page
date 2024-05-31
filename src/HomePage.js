@@ -1,42 +1,80 @@
-import { NavLink } from "react-router-dom";
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import k1 from './k1.png';
+import k2 from './k2.png';
 
-const style = {
+const containerStyle = {
     width: '100%',
-    height: '100%',
-}
+    height: '100vh',
+    position: 'relative',
+};
 
-const style1 = {
-    position: 'absolute',
-    width: '100%',
-    top: '22%',
+const headingStyle = {
     textAlign: 'center',
     fontSize: '2.8125rem',
-    letterSpacing: '0.1375rem'
-}
-
-const style2 = {
+    letterSpacing: '0.1375rem',
     position: 'absolute',
+    top: '22%',
     width: '100%',
-    height: '20%',
-    bottom: '0',
-    textAlign: 'center',
-}
+};
 
-const style3 = {
-    height: '100%'
-}
+const linkStyle = {
+    width: '20%',
+    height: '27%',
+    position: 'absolute',
+    bottom: '0',
+    left: '45%',
+    transform: 'translateX(-50%)',
+    textAlign: 'center',
+};
+
+const imgContainerStyle = {
+    position: 'relative',
+    width: '100%',
+    height: '100%',
+};
+
+const imgStyle = {
+    position: 'absolute',
+    width: 'auto',
+    height: '100%',
+    transition: 'opacity 0.5s ease-in-out',
+    objectFit: 'cover',
+};
 
 const HomePage = () => {
+    const [hover, setHover] = useState(false);
+
     return (
-        <>
-        <div style={style}>
-            <h1 style={style1}>Hey, I’m Jonghwan!</h1>
-            <NavLink to={"/page"} style={style2}>
-                <img style={style3} src="/favicon.ico" alt="favicon"/>
+        <div style={containerStyle}>
+            <h1 style={headingStyle}>Hey, I’m Jonghwan!</h1>
+            <NavLink
+                to="/page"
+                style={linkStyle}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+            >
+                <div style={imgContainerStyle}>
+                    <img
+                        style={{
+                            ...imgStyle,
+                            opacity: hover ? 0 : 1,
+                        }}
+                        src={k1}
+                        alt="k1"
+                    />
+                    <img
+                        style={{
+                            ...imgStyle,
+                            opacity: hover ? 1 : 0,
+                        }}
+                        src={k2}
+                        alt="k2"
+                    />
+                </div>
             </NavLink>
         </div>
-        </>
-    )
-}
+    );
+};
 
 export default HomePage;

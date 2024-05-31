@@ -1,11 +1,10 @@
 import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import p1 from './img/1p2.png';
-import p2 from './img/1p1.png';
-import p3 from './img/1p4.png';
-import p4 from './img/1p5.png';
-import p5 from './img/1p3.png';
+import p1 from './img/i1.png';
+import p2 from './img/i2.png';
+import p3 from './img/i3.png';
+import p4 from './img/i4.png';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -18,7 +17,7 @@ import { Pagination, Navigation, Autoplay, Mousewheel } from 'swiper/modules';
 import Title from "./Introduce/Title";
 
 const style = {
-    color: 'rgb(242,229,46)',
+    color:'black',
     position: 'absolute',
     left: '15%',
     top: '20%',
@@ -29,7 +28,7 @@ const style = {
 const asideColor = {
     position: 'absolute',
     right: '0',
-    backgroundColor: '#669966',
+    backgroundColor: 'rgba(227,167,167,1)',
     width: '22%',
     height: '100%'
 }
@@ -41,7 +40,7 @@ const textStyle = {
     width: '30%'
 }
 
-const Semi = () => {
+const News = () => {
     return (
         <>
             <style jsx>{`
@@ -79,28 +78,25 @@ const Semi = () => {
                 .swiper-button-next{
                     display:none;
                 }
+                li {
+                  margin-bottom: 10px; /* 간격을 조정할 값 */
+                }
             `}</style>
             <Title />
-            <h1 style={style}>학교 종이 땡땡땡</h1>
+            <h1 style={style}>A-Iforum</h1>
             <div style={textStyle}>
                 
-                    <h3>목적</h3>
-                    <ul>
-                        <li> 초등학교 수업 시작 알림 종 부재로 인한 현직 교사들의 어려움 발생</li>
-                        <li>아이들이 수업 시작 시간에 맞게 수업 준비를 하기 위한 웹 사이트를 기획</li>
-                        <li>현직 초등학교 교사의 의뢰로 제작</li>
-                    </ul>
-                  
-                    <h3>기획</h3>
-                    <ul>
-                        <li>쉬는시간 10분 동안 작동하는 타이머를 제공하고, 타이머가 0이 될 시 선택한 음악이 흘러 나옴.</li>
-                        <li>수업이 시작되기 전 이미 착석한 아이들을 체크할 수 있게 함.</li>
-                        <li>아이들을 칭찬할 수 있는 테이블을 만들어 테이블에 점수, 내용 등을 기입하고 조회할 수 있음.</li>
-                        <li>랭킹 페이지를 통해 아이들과 같이 확인하며 칭찬과 착석의 동기부여를 줄 수 있음.</li>
-                        <li>학생관리 페이지를 만들어 학생 각각 칭찬받은 내용과 결석, 조퇴 등 출결 내용을 조회하고, 생기부 작성에 도움을 줄 수 있음.</li>
-                        <li>캘린더를 제공해 선생님의 스케줄을 관리할 수 있음.</li>
-                    </ul>
-                    <p>Link: <a href="http://www.shbells.shop">www.shbells.shop</a></p>
+            <h2>프로젝트 개요</h2>
+              <p>I-forum"은 GPT API, DALL-E API, Huggingface 등 다양한 AI 모델을 조합하여 동화를 생성하고, 이를 유튜브에 자동으로 업로드해주는 자동화 AI 서비스입니다.</p>
+              <ul>
+                  <li>동화 생성: 다양한 AI 모델을 활용하여 창의적이고 재미있는 동화를 쉽게 생성</li>
+                  <li>유튜브 업로드: 생성된 동화를 자동으로 유튜브에 업로드하여 동영상 콘텐츠를 손쉽게 관리할 수 있습니다.</li>
+                  <li>사용자 친화적 인터페이스: 아이들이 쉽게 조작할 수 있는 인터페이스를 제공하여 창의력 개발에 도움을 줍니다.</li>
+                  <li>부업 창출: 부모들은 아이들이 만든 동화를 유튜브에 업로드함으로써 부수입을 얻을 수 있습니다.</li>
+                  <li>공유 경제: AI 모델을 활용한 동화 생성 및 자동화된 유튜브 업로드는 콘텐츠 공유와 경제적 가치를 창출합니다.</li>
+              </ul>
+              <p>Link: <a href="http://www.iforum.shop">www.iforum.shop</a></p>
+                
             </div>
             <div style={asideColor} />
             <div className="container">
@@ -119,22 +115,23 @@ const Semi = () => {
                     <SwiperSlide className="slide">
                         <img src={p1} alt='' className="slide-img"/>
                     </SwiperSlide>
+
                     <SwiperSlide className="slide">
                         <img src={p2} alt='' className="slide-img"/>
                     </SwiperSlide>
+
                     <SwiperSlide className="slide">
                         <img src={p3} alt='' className="slide-img"/>
                     </SwiperSlide>
+
                     <SwiperSlide className="slide">
                         <img src={p4} alt='' className="slide-img"/>
                     </SwiperSlide>
-                    <SwiperSlide className="slide">
-                        <img src={p5} alt='' className="slide-img"/>
-                    </SwiperSlide>
+
                 </Swiper>
             </div>
         </>
     );
 }
 
-export default Semi;
+export default News;

@@ -19,7 +19,7 @@ function FooterTwo({ fontColor }) {
     };
 
     const style6 = {
-        color: fontColor ? '#cc99ff' : 'black',
+        color: fontColor ? 'white' : 'black',
         marginBlockStart: '0.7rem',
         marginBlockEnd: '0.7rem',
         marginLeft: '3%',
